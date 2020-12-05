@@ -1,0 +1,27 @@
+<div *ngIf="loading" class="spinner">
+    <app-loading></app-loading>
+</div>
+<div *ngIf="error">
+    <p class="lead text-center">Something went wrong...</p>
+</div>
+<mat-grid-list cols="2" rowHeight="1:1.5">
+    <mat-grid-tile *ngFor="let rocket of rockets">
+        <mat-card class="rocket-card">
+            <mat-card-header>
+                <mat-card-title>{{ rocket.name }}</mat-card-title>
+            </mat-card-header>
+            <div class="response">
+                <img mat-card-image [src]="rocket.flickr_images[0]" alt="Photo SpaceX">
+            </div>
+            <mat-card-content>
+                <p>
+                    {{ rocket.description }}
+                </p>
+            </mat-card-content>
+            <mat-card-actions class="card-action">
+                <a color="primary" mat-raised-button [routerLink]="['/rockets', rocket.id]">
+                    Details</a>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

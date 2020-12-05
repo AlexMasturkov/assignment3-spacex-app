@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ rocketDetail.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="rocketDetail.flickr_images[1]" [alt]="rocketDetail.name">
+    <mat-card-content>
+        <p>
+            Type: {{ rocketDetail.type }}
+        </p>
+        <p>
+            Stages: {{ rocketDetail.stages }}
+        </p>
+        <p>
+            Boosters: {{ rocketDetail.boosters }}
+        </p>
+        <p>
+            First flight: {{ rocketDetail.first_flight }}
+        </p>
+        <p>
+            Country: {{ rocketDetail.country }}
+        </p>
+        <p>
+            Company: {{ rocketDetail.company }}
+        </p>
+        <p>
+            Height: {{ rocketDetail.height.meters }} meters
+        </p>
+        <p>
+            Diameter: {{ rocketDetail.diameter.meters }} meters
+        </p>
+        <p>
+            Engines: {{ rocketDetail.second_stage.engines }}
+        </p>
+        <hr>
+
+        <p>
+            {{ rocketDetail.description }}
+        </p>
+
+    </mat-card-content>
+    <mat-card-actions class="card-action">
+        <a color="primary" mat-raised-button [routerLink]="['/rockets']">Back
+        </a>
+    </mat-card-actions>
+</mat-card>

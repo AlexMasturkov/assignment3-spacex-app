@@ -1,0 +1,26 @@
+.drawer-container {
+  height: 100vh;
+}
+
+.main-app {
+  height: 100%;
+}
+
+.app-sidenav {
+  width: 200px;
+}
+
+.app-sidenav a {
+  text-decoration: none;
+}
+
+.content {
+  padding: 20px;
+}
+
+.main-action {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 90210;
+}

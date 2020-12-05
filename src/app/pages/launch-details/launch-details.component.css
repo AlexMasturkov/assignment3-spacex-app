@@ -1,0 +1,39 @@
+.mat-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2px;
+  padding-bottom: 20px;
+}
+
+.mat-card-header {
+  background-color: rgb(235, 235, 235);
+  padding: 20px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+
+.mat-card-content {
+  padding-top: 10px;
+  margin: 20px;
+
+}
+
+.mat-card-actions {
+  margin-left: 20px;
+}
+
+.mat-card-image {
+  max-height: 300px;
+  margin: auto;
+  padding-top: 50px;
+  width: auto;
+
+}
+
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}

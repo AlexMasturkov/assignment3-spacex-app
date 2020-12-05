@@ -1,0 +1,23 @@
+<div *ngIf="loading" class="spinner">
+    <app-loading></app-loading>
+</div>
+<div *ngIf="error">
+    <p class="lead text-center">Something went wrong...</p>
+</div>
+<mat-card *ngFor="let history of histories">
+    <mat-card-header>
+        <mat-card-title>{{ history.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <p>
+            Event Date: {{ history.event_date_utc }}
+        </p>
+        <p>
+            Details: {{ history.details }}
+        </p>
+        <div class="example-button-row" *ngIf="history.links.article!==null">
+            <a mat-raised-button target="_blank" color="primary" href="{{history.links.article}}">Link</a>
+        </div>
+    </mat-card-content>
+
+</mat-card>

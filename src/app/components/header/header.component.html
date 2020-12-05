@@ -1,0 +1,30 @@
+<header>
+    <mat-toolbar color="primary">
+        <button mat-icon-button aria-label="App menu" (click)="menu.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <h1 class="app-title">{{ title }}</h1>
+        <span class="toolbar-spacer"></span>
+        <button mat-icon-button aria-label="See more options" [matMenuTriggerFor]="moreMenu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #moreMenu="matMenu">
+            <a mat-menu-item routerLink="/">
+                <mat-icon>home</mat-icon>
+                <span>History</span>
+            </a>
+            <a mat-menu-item routerLink="/launches">
+                <mat-icon>flight_takeoff</mat-icon>
+                <span>Launches</span>
+            </a>
+            <a mat-menu-item routerLink="/rockets">
+                <mat-icon>flight</mat-icon>
+                <span>Rockets</span>
+            </a>
+            <a mat-menu-item routerLink="/about">
+                <mat-icon>perm_identity</mat-icon>
+                <span>About</span>
+            </a>
+        </mat-menu>
+    </mat-toolbar>
+</header>

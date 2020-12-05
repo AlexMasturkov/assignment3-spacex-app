@@ -1,0 +1,43 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{ launchDetail.name }}</mat-card-title>
+    </mat-card-header>
+    <div class="row">
+        <img mat-card-image [src]="launchDetail.links.patch.small" [alt]="launchDetail.name">
+        <mat-card-content>
+            <p>
+                Flight Number: {{ launchDetail.flight_number }}
+            </p>
+            <p>
+                Window: {{ launchDetail.window }}
+            </p>
+            <p>
+                Success: {{ launchDetail.success }}
+            </p>
+            <p>
+                Auto Update: {{ launchDetail.auto_update }}
+            </p>
+            <p>
+                Fire Date: {{ launchDetail.static_fire_date_utc }}
+            </p>
+            <p>
+                Upcoming: {{ launchDetail.upcoming }}
+            </p>
+            <p>
+                TBD: {{ launchDetail.tbd }}
+            </p>
+            <p>
+                NET: {{ launchDetail.net }}
+            </p>
+            <hr>
+            <p>
+                {{ launchDetail.details }}
+            </p>
+        </mat-card-content>
+
+    </div>
+    <mat-card-actions class="card-action">
+        <a color="primary" mat-raised-button routerLink="/launches">Back
+        </a>
+    </mat-card-actions>
+</mat-card>
