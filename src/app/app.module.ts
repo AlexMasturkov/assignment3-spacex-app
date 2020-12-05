@@ -56,7 +56,6 @@ import { LoadingComponent } from './components/loading/loading.component';
     MatCardModule,
     MatGridListModule,
     MatProgressSpinnerModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]

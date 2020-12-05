@@ -10,8 +10,7 @@ export class SpacexService {
     private http: HttpClient,
   ) { }
 
-  get(endpoint: string) {
-    
+  get(endpoint: string) {    
     return this.http.get(`https://api.spacexdata.com/v4/${endpoint}`);
   } 
 

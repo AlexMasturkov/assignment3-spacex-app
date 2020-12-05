@@ -15,8 +15,7 @@ export class AboutComponent implements OnInit {
   company: any;
 
   ngOnInit(): void {
-    this.spacexService.get('company').subscribe((response: any) => {
-      console.log(response);
+    this.spacexService.get('company').subscribe((response: any) => {     
       this.company = response;
     });
   }

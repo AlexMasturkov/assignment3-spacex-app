@@ -8,18 +8,15 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   constructor(
     private spacexService: SpacexService,
   ) { }
-
   histories: any[] = [];
   loading: boolean = true;
   error: boolean = false;
   
   getHistory() {
-    this.spacexService.get('history').subscribe((response: any[]) => {
-      console.log(response);
+    this.spacexService.get('history').subscribe((response: any[]) => {      
       this.histories = response;
         this.loading = false;
       }, (error: HttpErrorResponse) => {
@@ -35,12 +32,10 @@ export class HomeComponent implements OnInit {
       }
     );
   }
-
-ngOnInit(): void {
-  setTimeout(() => {
-    this.getHistory();
-  }, 1000);
-}
-
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.getHistory();
+    }, 1000);
+  }
 }
 

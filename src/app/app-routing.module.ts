@@ -8,16 +8,13 @@ import { AboutComponent } from './pages/about/about.component';
 import { RocketDetailsComponent } from './pages/rocket-details/rocket-details.component';
 import { LaunchDetailsComponent } from './pages/launch-details/launch-details.component';
 
-
-
-
 const routes: Routes = [
   {
     path: 'rockets',
     component: RocketsComponent,
   },
   {
-    path: 'rockets/:id', // :id is a variable that is used for passing information through the url.
+    path: 'rockets/:id',
     component: RocketDetailsComponent,
   },
   {
@@ -25,7 +22,7 @@ const routes: Routes = [
     component: LaunchesComponent,
   },
   {
-    path: 'launches/:id', // :id is a variable that is used for passing information through the url.
+    path: 'launches/:id', 
     component: LaunchDetailsComponent,
   },
   {

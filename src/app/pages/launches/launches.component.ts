@@ -8,7 +8,6 @@ import { SpacexService } from '../../services/spacex.service';
   styleUrls: ['./launches.component.css']
 })
 export class LaunchesComponent implements OnInit {
-
   constructor(
     private spacexService: SpacexService,
   ) { }
@@ -18,8 +17,7 @@ export class LaunchesComponent implements OnInit {
   error: boolean = false;
 
   getLaunches() {
-    this.spacexService.get('launches/past').subscribe((response: any[]) => {
-      console.log(response);
+    this.spacexService.get('launches/past').subscribe((response: any[]) => {      
       this.launches = response;
         this.loading = false;
       },
@@ -28,23 +26,19 @@ export class LaunchesComponent implements OnInit {
         if (error.status === 404) {
           // Do something specific to the 404 error
         }
-
         if (error.status === 403) {
           // Do something specific to the 403 error
         }
-
         this.loading = false;
         this.error = true;
       }
     );
   }
-
   ngOnInit(): void {
     setTimeout(() => {
       this.getLaunches();
     }, 1000);
   }
-
 }
 
 

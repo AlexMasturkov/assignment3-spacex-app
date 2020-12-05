@@ -8,7 +8,6 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./rockets.component.css']
 })
 export class RocketsComponent implements OnInit {
-
   constructor(
     private spacexService: SpacexService,
   ) { }
@@ -18,8 +17,7 @@ export class RocketsComponent implements OnInit {
   error: boolean = false;
 
   getRockets() {
-    this.spacexService.get('rockets').subscribe((response: any[]) => {
-      console.log(response);
+    this.spacexService.get('rockets').subscribe((response: any[]) => {   
       this.rockets = response;
         this.loading = false;
       },
@@ -32,13 +30,11 @@ export class RocketsComponent implements OnInit {
         if (error.status === 403) {
           // Do something specific to the 403 error
         }
-
         this.loading = false;
         this.error = true;
       }
     );
   }
-
   ngOnInit(): void {
     setTimeout(() => {
       this.getRockets();

@@ -8,7 +8,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./rocket-details.component.css']
 })
 export class RocketDetailsComponent implements OnInit {
-
   constructor(
     private activatedRoute: ActivatedRoute,
     private spacexService: SpacexService,
@@ -16,19 +15,12 @@ export class RocketDetailsComponent implements OnInit {
 
   rocketDetail: any; 
 
-  ngOnInit(): void {
-   
-    this.activatedRoute.params.subscribe(params => {
-      console.log(params);
-      const { id } = params;
-      console.log(id);
-      
-      this.spacexService.get(`rockets/${id}`).subscribe((response: any) => {
-        console.log(response);
+  ngOnInit(): void {   
+    this.activatedRoute.params.subscribe(params => {     
+      const { id } = params;     
+      this.spacexService.get(`rockets/${id}`).subscribe((response: any) => {       
         this.rocketDetail = response;
       });
-
     });
   }
-
 }
